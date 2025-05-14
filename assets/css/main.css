@@ -1,0 +1,405 @@
+/* iOS/macOS Color Scheme */
+:root {
+    /* Dark Mode Colors */
+    --dark-bg: #000000;
+    --dark-card: #1c1c1e;
+    --dark-text: #ffffff;
+    --dark-secondary: #8e8e93;
+    --dark-border: #38383a;
+    --dark-accent: #0a84ff;
+    --dark-accent-hover: #0071e3;
+    --dark-gradient: linear-gradient(135deg, #0a84ff, #5e5ce6);
+    
+    /* Light Mode Colors */
+    --light-bg: #f5f5f7;
+    --light-card: #ffffff;
+    --light-text: #1d1d1f;
+    --light-secondary: #86868b;
+    --light-border: #d2d2d7;
+    --light-accent: #0071e3;
+    --light-accent-hover: #0077ed;
+    --light-gradient: linear-gradient(135deg, #0071e3, #42a1ec);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background: var(--dark-gradient);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: var(--dark-text);
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.profile-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Navigation */
+.nav-container {
+    background: rgba(28, 28, 30, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: -2rem auto 2rem;
+    max-width: 800px;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: 1px solid var(--dark-border);
+}
+
+.nav-link {
+    color: var(--dark-text);
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Theme Toggle */
+.theme-toggle-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#theme-toggle {
+    background: var(--dark-accent);
+    color: var(--dark-text);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+}
+
+/* Sections */
+section {
+    background: var(--dark-card);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    border: 1px solid var(--dark-border);
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: var(--dark-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Education Section */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.education-card {
+    background: var(--dark-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--dark-border);
+}
+
+.education-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 12px;
+}
+
+.education-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: var(--dark-text);
+}
+
+.education-card p {
+    font-size: 0.9rem;
+    color: var(--dark-secondary);
+    margin: 0.2rem 0;
+}
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background: var(--dark-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--dark-border);
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--dark-secondary);
+}
+
+/* Skills Section */
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.skills-list li {
+    background: var(--dark-card);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--dark-border);
+    transition: all 0.3s ease;
+}
+
+/* Certificates Section */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.certificate-card {
+    background: var(--dark-card);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--dark-border);
+}
+
+.certificate-card a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+.certificate-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: white;
+    padding: 1rem;
+}
+
+.certificate-info {
+    padding: 1.5rem;
+}
+
+.certificate-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+
+.certificate-info p {
+    font-size: 0.9rem;
+    color: var(--dark-secondary);
+}
+
+/* Contact Section */
+.contact-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.contact-list li a {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.contact-list li a img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--dark-secondary);
+}
+
+/* Hover Effects */
+.education-card:hover,
+.project-card:hover,
+.certificate-card:hover,
+.skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--dark-accent);
+}
+
+.contact-list li a:hover img {
+    transform: scale(1.1);
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+    background: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.light-theme section,
+body.light-theme .education-card,
+body.light-theme .project-card,
+body.light-theme .certificate-card,
+body.light-theme .skills-list li {
+    background: var(--light-card);
+    border-color: var(--light-border);
+}
+
+body.light-theme .education-card h3,
+body.light-theme .project-card h3,
+body.light-theme .certificate-info h3 {
+    color: var(--light-text);
+}
+
+body.light-theme .education-card p,
+body.light-theme .project-card p,
+body.light-theme .certificate-info p {
+    color: var(--light-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-container h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+
+    .nav-container {
+        margin: -1rem 1rem 1rem;
+        padding: 0.8rem;
+    }
+
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Animation Classes */
+.animate__animated {
+    animation-duration: 0.8s;
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--dark-accent);
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+body.light-theme .scroll-progress {
+    background: var(--light-accent);
+} 
